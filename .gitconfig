@@ -1,0 +1,25 @@
+[user]
+	name = absenth
+	email = 1115138+absenth@users.noreply.github.com
+
+[branch]
+  autosetuprebase = always
+
+[alias]
+  ci = commit
+  st = status
+  graph = log --graph --all --pretty=format:"%h%x09%d%x20%s"
+
+  bradd = !sh -c 'git checkout main && git pull && git checkout -b "$1" main && git push -u origin "$1"' -
+  brpub = !sh -c 'git checkout main && git pull && git checkout "$1" && git rebase main && git push --force origin HEAD' -
+  brdel = !sh -c 'git checkout main && git pull && git branch --delete "$1" && git push origin --delete "$1"' -
+
+  brlint = !sh -c 'al -t $(git diff --name-only origin | egrep -i ya?ml$)'
+[core]
+	excludesfile = /Users/lars.noldan/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
