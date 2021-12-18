@@ -1,0 +1,51 @@
+XTerm*faceName: "DejaVu Sans Mono"
+XTerm*faceSize: 12
+XTerm*renderFont: true
+! Dynamically change font size with CTRL+SHIFT+PageUp/PageDown
+XTerm*faceSize1: 12
+XTerm*faceSize2: 14
+XTerm*faceSize3: 16
+XTerm*faceSize4: 18
+XTerm*faceSize5: 20
+XTerm*faceSize6: 22
+XTerm*utf8: 1
+XTerm*termName: xterm-256color
+XTerm*borderWidth: 0
+XTerm*autohint: true
+XTerm*backarrowKey: false
+XTerm*bellIsUrgent: false
+XTerm*cursorBlink: false
+XTerm*ScrollKey: true
+! Fix ALT key (check in mc with Alt+h)
+XTerm*metaSendsEscape: true
+XTerm*eightBitInput: false
+XTerm*ttyModes: erase ^?
+XTerm*fastScroll: true
+
+! I like a lot of scrollback.
+XTerm*saveLines: 100000
+
+! Use CLIPBOARD by default.
+XTerm*selectToClipboard: true
+! Hack xterm to add selection to both PRIMARY and CLIPBOARD.
+<Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
+
+! xterm defines a whole suite of "actions" for manipulating the terminal e.g.
+! copy-selection(), hard-reset(), scroll-back(), etc. These actions can be
+! mapped to mouse/key combinations using the translations resource.
+!
+! Normally, selected text is stored in PRIMARY, to be pasted with Shift+Insert
+! or by using the middle mouse button. With these settings you can use
+! CTRL+SHIFT+v/c and you can make Xterm copy to clipboard so that you can use
+! CTRL+v in GUI applications.
+XTerm*translations: #override \n\
+    Shift Ctrl <Key>Prior: larger-vt-font() \n\
+    Shift Ctrl <Key>Next: smaller-vt-font() \n\
+    Shift Ctrl <Key>C: copy-selection(CLIPBOARD) \n\
+    Shift Ctrl <Key>V: insert-selection(CLIPBOARD) \n\
+    <Key>BackSpace: string(0x7f) \n\
+    <Key>Delete: string(0x1b) string("[3~")
+
+! Theme.
+! https://github.com/logico-dev/Xresources-themes
+#include ".dotfiles/xresource-themes/ubuntu.Xresources"
