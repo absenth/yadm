@@ -1,1 +1,4 @@
-/home/absenth/git/absenth/vim_files/configs/yamllint-conf
+extends: relaxed
+
+rules:
+  line-length: disable
