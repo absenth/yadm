@@ -37,3 +37,11 @@ fi
 if [ -f "$HOME/.ssh/secrets.incl" ] ; then
     . $HOME/.ssh/secrets.incl
 fi
+
+if [ -f "/usr/bin/nvim" ] ; then
+   alias vim="/usr/bin/nvim"
+fi
+
+if [ -d "$HOME/.emacs.d/bin" ] ; then
+    PATH="$HOME/.emacs.d/bin:$PATH"
+fi

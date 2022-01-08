@@ -186,7 +186,10 @@ bar {
 ## Autostart applicatons ##
 
 # Let's setup our Displays
-exec xrandr --output DP-2-2 --left-of eDP-1
+exec xrandr --output DP-5 --right-of HDMI-0
+
+# Let's start the compositor
+exec_always --no-startup-id picom &
 
 # Let's get our wallpaper.
 # You can run nitrogen from the console and set it up, afterwards use "--restore" to use it in i3.
