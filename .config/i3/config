@@ -186,7 +186,7 @@ bar {
 ## Autostart applicatons ##
 
 # Let's setup our Displays
-exec xrandr --output DP-5 --right-of HDMI-0
+exec xrandr --output DP-5 --mode 3840x2160 --rate 30.00 --right-of HDMI-0
 
 # Let's start the compositor
 exec_always --no-startup-id picom &
@@ -199,4 +199,4 @@ exec --no-startup-id "nitrogen --restore"
 # way to do it. As an example I am swithing between a Danish and an Arabic
 # keyboard layout in this setup.
 # You switch between layouts by pressing "left CTRL + right CTRL".
-exec --no-startup-id "setxkbmap -layout dk,ara -option grp:ctrls_toggle"
+exec --no-startup-id "setxkbmap -layout us -option grp:ctrls_toggle"
