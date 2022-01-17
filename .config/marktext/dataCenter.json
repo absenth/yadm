@@ -1,0 +1,14 @@
+{
+	"imageFolderPath": "/home/absenth/.config/marktext/images/",
+	"screenshotFolderPath": "/home/absenth/.config/marktext/screenshot/",
+	"webImages": [],
+	"cloudImages": [],
+	"currentUploader": "none",
+	"imageBed": {
+		"github": {
+			"owner": "",
+			"repo": "",
+			"branch": ""
+		}
+	}
+}
