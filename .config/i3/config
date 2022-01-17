@@ -189,7 +189,7 @@ bar {
 exec xrandr --output DP-5 --mode 3840x2160 --rate 30.00 --right-of HDMI-0
 
 # Let's start the compositor
-exec_always --no-startup-id picom &
+exec_always --no-startup-id picom -b --config ~/.config/picom/picom.conf &
 
 # Let's get our wallpaper.
 # You can run nitrogen from the console and set it up, afterwards use "--restore" to use it in i3.
