@@ -45,3 +45,13 @@ fi
 if [ -d "$HOME/.emacs.d/bin" ] ; then
     PATH="$HOME/.emacs.d/bin:$PATH"
 fi
+
+if [ -f "$HOME/.cargo/bin/exa" ] ; then
+    alias ls="exa"
+    alias ll="exa -alh"
+    alias tree="exa --tree"
+fi
+
+if [ -f "$HOME/.cargo/bin/bat" ] ; then
+    alias cat="bat"
+fi
