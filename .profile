@@ -55,3 +55,7 @@ fi
 if [ -f "$HOME/.cargo/bin/bat" ] ; then
     alias cat="bat"
 fi
+
+if [ -d "$HOME/bin/Discord" ] ; then
+    PATH="$HOME/bin/Discord:$PATH"
+fi
