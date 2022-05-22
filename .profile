@@ -51,3 +51,7 @@ fi
 if [ -f "$HOME/.cargo/bin/bat" ] ; then
     alias cat="bat"
 fi
+
+if [ -f "/run/user/$UID/podman/podman.sock" ] ; then
+    export DOCKER_HOST=unix:///run/user/$UID/podman/podman.sock
+fi
