@@ -5,6 +5,7 @@ antigen use oh-my-zsh
 antigen bundle git
 antigen bundle command-not-found
 antigen bundle docker
+antigen bundle toolbox
 
 # Load external bundles
 antigen bundle zsh-users/zsh-completions
