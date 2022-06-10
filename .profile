@@ -42,6 +42,12 @@ if [ -d "$HOME/.emacs.d/bin" ] ; then
     PATH="$HOME/.emacs.d/bin:$PATH"
 fi
 
+if [ -f "/run/user/$UID/podman/podman.sock" ] ; then
+    export DOCKER_HOST=unix:///run/user/$UID/podman/podman.sock
+fi
+
+# Rust powered utilities
+
 if [ -f "$HOME/.cargo/bin/exa" ] ; then
     alias ls="exa"
     alias ll="exa -alh"
@@ -52,6 +58,12 @@ if [ -f "$HOME/.cargo/bin/bat" ] ; then
     alias cat="bat"
 fi
 
-if [ -f "/run/user/$UID/podman/podman.sock" ] ; then
-    export DOCKER_HOST=unix:///run/user/$UID/podman/podman.sock
+if [ -f "$HOME/.cargo/bin/hyperfine" ] ; then
+    alias time="hyperfine"
 fi
+
+if [ -f "$HOME/.cargo/bin/dust" ] ; then
+    alias du="dust"
+fi
+
+export GOPATH=~/.local/share/go
