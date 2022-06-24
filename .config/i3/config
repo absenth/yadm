@@ -186,7 +186,7 @@ bar {
 ## Autostart applicatons ##
 
 # Let's setup our Displays
-exec xrandr --output DP-5 --mode 3840x2160 --rate 30.00 --right-of HDMI-0
+exec xrandr --output HDMI-2  --mode 3440x1440 50.00 --right-of eDP-1
 
 # Let's start the compositor
 exec_always --no-startup-id picom -b --config ~/.config/picom/picom.conf &
