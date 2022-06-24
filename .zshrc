@@ -11,3 +11,9 @@ alias stream="xrandr --output DP-5 --rate 60.00 --mode 1920x1080 --right-of HDMI
 alias work="xrandr --output DP-5 --rate 30.00 --mode 3840x2160 --right-of HDMI-0"
 
 source "$HOME/.profile"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/absenth/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/home/absenth/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/absenth/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/absenth/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
