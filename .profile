@@ -26,6 +26,10 @@ if [ -d "/usr/local/go" ] ; then
     PATH="/usr/local/go/bin:$PATH"
 fi
 
+if [ -d "$HOME/.local/share/go" ] ; then
+    PATH="$HOME/.local/share/go/bin:$PATH"
+fi
+
 if [ -f "/usr/bin/vim" ] ; then
     export EDITOR="/usr/bin/vim"
 fi
@@ -49,6 +53,12 @@ fi
 # Rust powered utilities
 
 if [ -f "$HOME/.cargo/bin/exa" ] ; then
+    alias ls="exa"
+    alias ll="exa -alh"
+    alias tree="exa --tree"
+fi
+
+if [ -f "/usr/bin/exa" ] ; then
     alias ls="exa"
     alias ll="exa -alh"
     alias tree="exa --tree"
