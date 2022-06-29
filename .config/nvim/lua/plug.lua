@@ -15,6 +15,17 @@ return require('packer').startup(function(use)
       opt = true}
     }
   use { 'Mofiqul/dracula.nvim' }
+
+  -- [[ Development ]]
+  use {
+      'nvim-telescope/telescope.nvim',
+      requires = { {'nvim-lua/plenary.nvim'} }
+  }
+  use { 'majutsushi/tagbar' }
+  use { 'Yggdroot/indentLine' }
+  use { 'tpope/vim-fugitive' }
+  use { 'junegunn/gv.vim' }
+  use { 'windwp/nvim-autopairs' }
 end,
 
 {
