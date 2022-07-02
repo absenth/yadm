@@ -30,8 +30,12 @@ if [ -d "$HOME/.local/share/go" ] ; then
     PATH="$HOME/.local/share/go/bin:$PATH"
 fi
 
-if [ -f "/usr/bin/vim" ] ; then
-    export EDITOR="/usr/bin/vim"
+if [ -d "$HOME/.emacs.d/bin" ] ; then
+    PATH="$HOME/.emacs.d/bin:$PATH"
+fi
+
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin/:$PATH"
 fi
 
 if [ -f "$HOME/.ssh/secrets.incl" ] ; then
@@ -42,8 +46,12 @@ if [ -f "/usr/bin/nvim" ] ; then
    alias vim="/usr/bin/nvim"
 fi
 
-if [ -d "$HOME/.emacs.d/bin" ] ; then
-    PATH="$HOME/.emacs.d/bin:$PATH"
+if [ -f "$HOME/.local/bin/lvim" ] ; then
+  alias vim="$HOME/.local/bin/lvim"
+fi
+
+if [ -f "/usr/bin/vim" ] ; then
+    export EDITOR="vim"
 fi
 
 if [ -f "/run/user/$UID/podman/podman.sock" ] ; then
@@ -77,3 +85,4 @@ if [ -f "$HOME/.cargo/bin/dust" ] ; then
 fi
 
 export GOPATH=~/.local/share/go
+
