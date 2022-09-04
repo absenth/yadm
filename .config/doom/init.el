@@ -76,7 +76,7 @@
        eshell            ; the elisp shell that works everywhere
        ;;shell             ; simple shell REPL for Emacs
        ;;term              ; basic terminal emulator for Emacs
-       ;;vterm             ; the best terminal emulation in Emacs
+       vterm             ; the best terminal emulation in Emacs
 
        :checkers
        syntax              ; tasing you for every semicolon you forget
@@ -189,6 +189,4 @@
        :config
        ;;literate
        (default +bindings +smartparens)
-       (projectile-add-known-project "~/git/absenth/agridies")
-       (projectile-add-known-project "~/git/absenth/cs50")
-       (projectile-add-known-project "~/git/absenth/varselsignal"))
+       (projectile-add-known-project "~/src/absenth/todo"))

@@ -38,6 +38,14 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin/:$PATH"
 fi
 
+if [ -d "/opt/homebrew/bin" ] ; then
+    PATH="/opt/homebrew/bin/:$PATH"
+fi
+
+if [ -f "/Users/absenth/Library/Python/3.8/bin/ansible" ] ; then
+    PATH="/Users/absenth/Library/Python/3.8/bin/:$PATH"
+fi
+
 if [ -f "$HOME/.ssh/secrets.incl" ] ; then
     . $HOME/.ssh/secrets.incl
 fi
@@ -86,3 +94,5 @@ fi
 
 export GOPATH=~/.local/share/go
 
+export PATH=$PATH:/Library/Java/JavaVirtualMachines/graalvm-ce-java11-22.3.0-dev/Contents/Home/bin
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/graalvm-ce-java11-22.3.0-dev/Contents/Home
