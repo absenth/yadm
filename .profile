@@ -54,6 +54,10 @@ if [ -f "/usr/bin/nvim" ] ; then
    alias vim="/usr/bin/nvim"
 fi
 
+if [ -f "/opt/homebrew/bin//nvim" ] ; then
+   alias vim="/opt/homebrew/bin//nvim"
+fi
+
 if [ -f "$HOME/.local/bin/lvim" ] ; then
   alias vim="$HOME/.local/bin/lvim"
 fi
