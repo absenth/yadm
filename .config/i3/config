@@ -186,7 +186,7 @@ bar {
 ## Autostart applicatons ##
 
 # Let's setup our Displays
-exec xrandr --output HDMI-2  --mode 3440x1440 50.00 --right-of eDP-1
+exec xrandr --output HDMI-2  --mode 1920x1080 --left-of eDP-1
 
 # Let's start the compositor
 exec_always --no-startup-id picom -b --config ~/.config/picom/picom.conf &
@@ -200,3 +200,12 @@ exec --no-startup-id "nitrogen --restore"
 # keyboard layout in this setup.
 # You switch between layouts by pressing "left CTRL + right CTRL".
 exec --no-startup-id "setxkbmap -layout us -option grp:ctrls_toggle"
+
+# Pulse Audio controls
+# +/- sound volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl -- set-sink-volume 0 +10%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume 0 -10%
+# mute volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+# mute mic
+bindsym XF86AudioMicMute exec pactl set-source-mute 1 toggle

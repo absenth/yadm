@@ -19,7 +19,7 @@ conky.text = [[
     {"full_text": " | ", "color":"\#555555"},
     {"full_text": "LAN: ${addr enp0s31f6}","color":"\#89b859"},
     {"full_text": " | ", "color":"\#555555"},
-    {"full_text": "VPN: ${addr tun0}","color":"\#00aaaa"},
+    {"full_text": "WIFI: ${addr wlp59s0}","color":"\#00aaaa"},
     {"full_text": " | ", "color":"\#555555"},
     {"full_text": "${exec hostname }", "color":"\#9b703f"},
     {"full_text": " | ", "color":"\#555555"},
