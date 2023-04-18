@@ -72,6 +72,10 @@ fi
 
 # Rust powered utilities
 
+if [ -f "$HOME/.cargo/env" ] ; then
+  source $HOME/.cargo/env
+fi
+
 if [ -f "$HOME/.cargo/bin/exa" ] ; then
     alias ls="exa"
     alias ll="exa -alh"
@@ -100,3 +104,4 @@ export GOPATH=~/.local/share/go
 
 export PATH=$PATH:/Library/Java/JavaVirtualMachines/graalvm-ce-java11-22.3.0-dev/Contents/Home/bin
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/graalvm-ce-java11-22.3.0-dev/Contents/Home
+. "$HOME/.cargo/env"
