@@ -42,6 +42,10 @@ if [ -d "/opt/homebrew/bin" ] ; then
     PATH="/opt/homebrew/bin/:$PATH"
 fi
 
+if [ -d "/Applications/MacPorts/Emacs.app/Contents/MacOS" ] ; then
+    PATH="/Applications/MacPorts/Emacs.app/Contents/MacOS:$PATH"
+fi
+
 if [ -f "/Users/absenth/Library/Python/3.8/bin/ansible" ] ; then
     PATH="/Users/absenth/Library/Python/3.8/bin/:$PATH"
 fi
@@ -99,6 +103,11 @@ fi
 if [ -f "$HOME/.cargo/bin/dust" ] ; then
     alias du="dust"
 fi
+
+if [ -f "/opt/homebrew/bin//python3.11" ] ; then
+  alias python3="/opt/homebrew/bin//python3.11"
+fi
+
 
 export GOPATH=~/.local/share/go
 
