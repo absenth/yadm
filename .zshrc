@@ -18,4 +18,4 @@ if [ -f '/home/absenth/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/home
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/absenth/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/absenth/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
-eval "$(starship init zsh)"
+if [ -f '/opt/homebrew/bin//starship' ] ; then eval "$(starship init zsh)"; fi
