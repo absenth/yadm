@@ -111,6 +111,6 @@ fi
 
 export GOPATH=~/.local/share/go
 
-export PATH=$PATH:/Library/Java/JavaVirtualMachines/graalvm-ce-java11-22.3.0-dev/Contents/Home/bin
+export PATH=$PATH:/Library/Java/JavaVirtualMachines/graalvm-ce-java11-22.3.0-dev/Contents/Home/bin:/usr/local/bin
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/graalvm-ce-java11-22.3.0-dev/Contents/Home
 . "$HOME/.cargo/env"

@@ -100,8 +100,8 @@ lvim.plugins = {
   {
     "catppuccin/nvim",
     name = "catppuccin",
-    lazy = true
-  }
+    lazy = True
+  },
 }
 
 -- -- Autocommands (`:help autocmd`) <https://neovim.io/doc/user/autocmd.html>
