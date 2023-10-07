@@ -1,4 +1,4 @@
-lncal opts = {
+local opts = {
     noremap = true,
     silent = true,
 }
@@ -21,9 +21,12 @@ vim.keymap.set('n', '<C-Up>', ':resize -2<CR>', opts)
 vim.keymap.set('n', '<C-Down>', ':resize +2<CR>', opts)
 vim.keymap.set('n', '<C-Left>', ':vertical -2<CR>', opts)
 vim.keymap.set('n', '<C-Right>', ':vertical +2<CR>', opts)
+
+-- Set Toggles
 vim.keymap.set('n', '<Leader>ns', ':lua toggle_stuff()<CR>', default_opts)
 vim.keymap.set('n', '<Leader>n', ':lua toggle_num()<CR>', default_opts)
 vim.keymap.set('n', '<Leader>rn', ':lua toggle_relnum()<CR>', default_opts)
+vim.keymap.set('n', '<Leader>g', ':GitGutterToggle<CR>', default_opts)
 
 -----------------
 -- Visual mode --
