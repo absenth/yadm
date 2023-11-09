@@ -74,6 +74,10 @@ if [ -f "/run/user/$UID/podman/podman.sock" ] ; then
     export DOCKER_HOST=unix:///run/user/$UID/podman/podman.sock
 fi
 
+if [ -f "/usr/local/bin/starship" ] ; then
+    eval "$(starship init zsh)"
+fi
+
 # Rust powered utilities
 
 if [ -f "$HOME/.cargo/env" ] ; then
@@ -113,4 +117,3 @@ export GOPATH=~/.local/share/go
 
 export PATH=$PATH:/Library/Java/JavaVirtualMachines/graalvm-ce-java11-22.3.0-dev/Contents/Home/bin:/usr/local/bin
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/graalvm-ce-java11-22.3.0-dev/Contents/Home
-. "$HOME/.cargo/env"
