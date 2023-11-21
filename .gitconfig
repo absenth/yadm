@@ -1,6 +1,7 @@
 [user]
 	name = absenth
 	email = 1115138+absenth@users.noreply.github.com
+	signingkey = /Users/absenth/.ssh/id_ed25519.pub
 
 [branch]
   autosetuprebase = always
@@ -25,3 +26,5 @@
 	trustExitCode = true
 [init]
 	defaultBranch = main
+[gpg]
+	format = ssh

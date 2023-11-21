@@ -78,6 +78,17 @@ if [ -f "/usr/local/bin/starship" ] ; then
     eval "$(starship init zsh)"
 fi
 
+if [ -f "$HOME/.modular/modular.cfg" ] ; then 
+  export MODULAR_HOME="$HOME/.modular"
+  export PATH="$MODULAR_HOME/pkg/packages.modular.com_mojo/bin:$PATH"
+fi
+
+# flutter development setup
+
+if [ -f "$HOME/development/flutter/bin/flutter" ] ; then
+  PATH="$PATH:$HOME/development/flutter/bin/"
+fi
+
 # Rust powered utilities
 
 if [ -f "$HOME/.cargo/env" ] ; then
