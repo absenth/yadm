@@ -13,6 +13,29 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+# Darwin Specific Path stuff
+if [ -d "/opt/homebrew/bin" ] ; then
+    PATH="/opt/homebrew/bin/:$PATH"
+fi
+
+if [ -d "/Applications/MacPorts/Emacs.app/Contents/MacOS" ] ; then
+    PATH="/Applications/MacPorts/Emacs.app/Contents/MacOS:$PATH"
+fi
+
+if [ -f "/opt/homebrew/bin/nvim" ] ; then
+   alias vim="/opt/homebrew/bin/nvim"
+fi
+
+if [ -f "/opt/homebrew/bin/python3.11" ] ; then
+  alias python3="/opt/homebrew/bin/python3.11"
+fi
+
+if [ -d "Library/Java/JavaVirtualMachines/graalvm-ce-java11-22.3.0-dev/Contents/Home/bin" ] ; then
+    export PATH=$PATH:/Library/Java/JavaVirtualMachines/graalvm-ce-java11-22.3.0-dev/Contents/Home/bin:/usr/local/bin
+    export JAVA_HOME=/Library/Java/JavaVirtualMachines/graalvm-ce-java11-22.3.0-dev/Contents/Home
+fi
+
+
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
@@ -38,14 +61,6 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin/:$PATH"
 fi
 
-if [ -d "/opt/homebrew/bin" ] ; then
-    PATH="/opt/homebrew/bin/:$PATH"
-fi
-
-if [ -d "/Applications/MacPorts/Emacs.app/Contents/MacOS" ] ; then
-    PATH="/Applications/MacPorts/Emacs.app/Contents/MacOS:$PATH"
-fi
-
 if [ -f "/Users/absenth/Library/Python/3.8/bin/ansible" ] ; then
     PATH="/Users/absenth/Library/Python/3.8/bin/:$PATH"
 fi
@@ -56,10 +71,6 @@ fi
 
 if [ -f "/usr/bin/nvim" ] ; then
    alias vim="/usr/bin/nvim"
-fi
-
-if [ -f "/opt/homebrew/bin//nvim" ] ; then
-   alias vim="/opt/homebrew/bin//nvim"
 fi
 
 if [ -f "$HOME/.local/bin/lvim" ] ; then
@@ -78,7 +89,11 @@ if [ -f "/usr/local/bin/starship" ] ; then
     eval "$(starship init zsh)"
 fi
 
-if [ -f "$HOME/.modular/modular.cfg" ] ; then 
+if [ -f "/usr/bin/starship" ] ; then
+    eval "$(starship init zsh)"
+fi
+
+if [ -f "$HOME/.modular/modular.cfg" ] ; then
   export MODULAR_HOME="$HOME/.modular"
   export PATH="$MODULAR_HOME/pkg/packages.modular.com_mojo/bin:$PATH"
 fi
@@ -101,12 +116,6 @@ if [ -f "$HOME/.cargo/bin/exa" ] ; then
     alias tree="exa --tree"
 fi
 
-if [ -f "/usr/bin/exa" ] ; then
-    alias ls="exa"
-    alias ll="exa -alh"
-    alias tree="exa --tree"
-fi
-
 if [ -f "$HOME/.cargo/bin/bat" ] ; then
     alias cat="bat"
 fi
@@ -119,12 +128,10 @@ if [ -f "$HOME/.cargo/bin/dust" ] ; then
     alias du="dust"
 fi
 
-if [ -f "/opt/homebrew/bin//python3.11" ] ; then
-  alias python3="/opt/homebrew/bin//python3.11"
+
+# Rust powered utilities installed by the system package manager
+if [ -f "/usr/bin/exa" ] ; then
+    alias ls="exa"
+    alias ll="exa -alh"
+    alias tree="exa --tree"
 fi
-
-
-export GOPATH=~/.local/share/go
-
-export PATH=$PATH:/Library/Java/JavaVirtualMachines/graalvm-ce-java11-22.3.0-dev/Contents/Home/bin:/usr/local/bin
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/graalvm-ce-java11-22.3.0-dev/Contents/Home
