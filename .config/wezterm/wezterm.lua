@@ -4,7 +4,7 @@ return {
   default_prog = { '/bin/zsh' },
   font = wezterm.font('JetBrains Mono', { weight = 'Bold', italic = true }),
   font_size = 12,
-  color_scheme = 'GCatppuccin Frapperuvbox dark, medium (base16)',
+  color_scheme = 'Catppuccin Frappe',
   window_frame = {
     font_size = 12.0
   },
