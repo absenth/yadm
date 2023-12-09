@@ -4,7 +4,6 @@ antigen use oh-my-zsh
 # Load bundles from OMZ
 antigen bundle git
 antigen bundle command-not-found
-antigen bundle docker
 antigen bundle toolbox
 
 # Load external bundles
