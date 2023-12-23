@@ -135,3 +135,4 @@ if [ -f "/usr/bin/exa" ] ; then
     alias ll="exa -alh"
     alias tree="exa --tree"
 fi
+. "$HOME/.cargo/env"
