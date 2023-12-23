@@ -25,7 +25,7 @@ keybinds {
         bind "-" { Resize "Decrease"; }
     }
     pane {
-        bind "Ctrl a" { SwitchToMode "Normal"; }
+        bind "Ctrl d" { SwitchToMode "Normal"; }
         bind "h" "Left" { MoveFocus "Left"; SwitchToMode "Normal"; }
         bind "l" "Right" { MoveFocus "Right"; SwitchToMode "Normal"; }
         bind "j" "Down" { MoveFocus "Down"; SwitchToMode "Normal"; }
@@ -38,7 +38,7 @@ keybinds {
         bind "z" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
         bind "f" { TogglePaneFrames; SwitchToMode "Normal"; }
         bind "w" { ToggleFloatingPanes; SwitchToMode "Normal"; }
-        bind "Ctrl a" { ToggleFloatingPanes; SwitchToMode "Normal"; }
+        bind "Ctrl d" { ToggleFloatingPanes; SwitchToMode "Normal"; }
         bind "e" { TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }
         bind "r" { SwitchToMode "RenamePane"; PaneNameInput 0;}
     }
@@ -164,7 +164,7 @@ keybinds {
         bind "Enter" "Esc" { SwitchToMode "Normal"; }
     }
     shared_except "pane" "locked" {
-        bind "Ctrl a" { SwitchToMode "Pane"; }
+        bind "Ctrl d" { SwitchToMode "Pane"; }
     }
     shared_except "resize" "locked" {
         bind "Ctrl n" { SwitchToMode "Resize"; }
