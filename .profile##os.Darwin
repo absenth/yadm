@@ -133,6 +133,11 @@ if [ -d "$HOME/bin/zig" ] ; then
     PATH=$PATH:$HOME/bin/zig
 fi
 
+if [ -d "$HOME/bin/zls" ] ; then
+    PATH=$PATH:$HOME/bin/zls
+fi
+
+
 
 # Rust powered utilities installed by the system package manager
 if [ -f "/usr/bin/exa" ] ; then
