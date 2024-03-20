@@ -23,7 +23,7 @@ config.font_size = 14
 
 -- Configure the Window parameters:
 config.color_scheme_dirs = { '~/.config/wezterm/colors' }
-config.color_scheme = 'Catppuccin Frappe'
+config.color_scheme = 'Kasugano (terminal.sexy)'
 config.tab_bar_at_bottom = true
 config.window_close_confirmation = 'NeverPrompt'
 config.window_padding = {
