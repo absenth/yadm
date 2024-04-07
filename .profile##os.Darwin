@@ -73,6 +73,11 @@ if [ -f "/usr/bin/nvim" ] ; then
    alias vim="/usr/bin/nvim"
 fi
 
+if [ -f "/Users/absenth/.nix-profile/bin/nvim" ] ; then
+    alias vim="/Users/absenth/.nix-profile/bin/nvim"
+fi
+
+
 if [ -f "$HOME/.local/bin/lvim" ] ; then
   alias vim="$HOME/.local/bin/lvim"
 fi
@@ -86,6 +91,10 @@ if [ -f "/run/user/$UID/podman/podman.sock" ] ; then
 fi
 
 if [ -f "/usr/local/bin/starship" ] ; then
+    eval "$(starship init zsh)"
+fi
+
+if [ -f "/Users/absenth/.nix-profile/bin/starship" ] ; then
     eval "$(starship init zsh)"
 fi
 
