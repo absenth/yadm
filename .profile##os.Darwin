@@ -77,7 +77,6 @@ if [ -f "/Users/absenth/.nix-profile/bin/nvim" ] ; then
     alias vim="/Users/absenth/.nix-profile/bin/nvim"
 fi
 
-
 if [ -f "$HOME/.local/bin/lvim" ] ; then
   alias vim="$HOME/.local/bin/lvim"
 fi
@@ -125,8 +124,18 @@ if [ -f "$HOME/.cargo/bin/exa" ] ; then
     alias tree="exa --tree"
 fi
 
+if [ -f "/Users/absenth/.nix-profile/bin/exa" ] ; then
+    alias ls="exa"
+    alias ll="exa -alh"
+    alias tree="exa --tree"
+fi
+
 if [ -f "$HOME/.cargo/bin/bat" ] ; then
     alias cat="bat"
+fi
+
+if [ -f "/Users/absenth/.nix-profile/bin/bat" ] ; then
+    alias cat="/Users/absenth/.nix-profile/bin/bat"
 fi
 
 if [ -f "$HOME/.cargo/bin/hyperfine" ] ; then
