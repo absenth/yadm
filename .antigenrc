@@ -4,13 +4,11 @@ antigen use oh-my-zsh
 # Load bundles from OMZ
 antigen bundle git
 antigen bundle command-not-found
-antigen bundle toolbox
 
 # Load external bundles
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle 1995parham/buffalo.zsh
 
 # Select theme
 antigen theme OscarAkaElvis/zsh-parrot-theme
