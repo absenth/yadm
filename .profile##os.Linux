@@ -13,29 +13,6 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-# Darwin Specific Path stuff
-if [ -d "/opt/homebrew/bin" ] ; then
-    PATH="/opt/homebrew/bin/:$PATH"
-fi
-
-if [ -d "/Applications/MacPorts/Emacs.app/Contents/MacOS" ] ; then
-    PATH="/Applications/MacPorts/Emacs.app/Contents/MacOS:$PATH"
-fi
-
-if [ -f "/opt/homebrew/bin/nvim" ] ; then
-   alias vim="/opt/homebrew/bin/nvim"
-fi
-
-if [ -f "/opt/homebrew/bin/python3.11" ] ; then
-  alias python3="/opt/homebrew/bin/python3.11"
-fi
-
-if [ -d "Library/Java/JavaVirtualMachines/graalvm-ce-java11-22.3.0-dev/Contents/Home/bin" ] ; then
-    export PATH=$PATH:/Library/Java/JavaVirtualMachines/graalvm-ce-java11-22.3.0-dev/Contents/Home/bin:/usr/local/bin
-    export JAVA_HOME=/Library/Java/JavaVirtualMachines/graalvm-ce-java11-22.3.0-dev/Contents/Home
-fi
-
-
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
@@ -69,16 +46,12 @@ if [ -f "$HOME/.ssh/secrets.incl" ] ; then
     . $HOME/.ssh/secrets.incl
 fi
 
-if [ -f "/usr/bin/nvim" ] ; then
-   alias vim="/usr/bin/nvim"
-fi
-
-if [ -f "$HOME/.local/bin/lvim" ] ; then
-  alias vim="$HOME/.local/bin/lvim"
-fi
-
 if [ -f "/usr/bin/vim" ] ; then
     export EDITOR="vim"
+fi
+
+if [ -f "/usr/bin/nvim" ] ; then
+   alias vim="/usr/bin/nvim"
 fi
 
 if [ -f "/run/user/$UID/podman/podman.sock" ] ; then
@@ -116,12 +89,14 @@ if [ -f "$HOME/.cargo/bin/exa" ] ; then
     alias tree="exa --tree"
 fi
 
-if [ -f "$HOME/.cargo/bin/bat" ] ; then
-    alias cat="bat"
+if [ -f "$HOME/.cargo/bin/eza" ] ; then
+    alias ls="eza"
+    alias ll="eza -alh"
+    alias tree="eza --tree"
 fi
 
-if [ -f "$HOME/.cargo/bin/hyperfine" ] ; then
-    alias time="hyperfine"
+if [ -f "$HOME/.cargo/bin/bat" ] ; then
+    alias cat="bat"
 fi
 
 if [ -f "$HOME/.cargo/bin/dust" ] ; then
@@ -135,3 +110,18 @@ if [ -f "/usr/bin/exa" ] ; then
     alias ll="exa -alh"
     alias tree="exa --tree"
 fi
+
+if [ -f "/usr/bin/eza" ] ; then
+    alias ls="eza --color=always --icons=always"
+    alias ll="eza -alh --icons=always --git --color=always"
+    alias tree="eza --tree"
+fi
+
+if [ -f "/usr/bin/bat" ] ; then
+    alias cat="bat"
+fi
+
+if [ -f "/usr/bin/dust" ] ; then
+    alias du="dust"
+fi
+
