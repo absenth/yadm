@@ -155,6 +155,11 @@ if [ -d "$HOME/bin/zls" ] ; then
     PATH=$PATH:$HOME/bin/zls
 fi
 
+# Setup Rebar/Erlang/Gleam
+if [ -d "$HOME/.cache/rebar3/bin:$PATH" ] ; then
+    PATH=$PATH:$HOME/.cache/rebar3/bin
+fi
+
 
 
 # Rust powered utilities installed by the system package manager
