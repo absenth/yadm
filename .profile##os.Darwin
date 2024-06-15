@@ -125,8 +125,8 @@ if [ -f "$HOME/.cargo/bin/exa" ] ; then
 fi
 
 if [ -f "/Users/absenth/.nix-profile/bin/exa" ] ; then
-    alias ls="exa"
-    alias ll="exa -alh"
+    alias ls="exa --color=always --icons=always"
+    alias ll="exa -alh --color=always --icons=always --git"
     alias tree="exa --tree"
 fi
 
