@@ -15,7 +15,7 @@ fi
 
 # Darwin Specific Path stuff
 if [ -d "/opt/homebrew/bin" ] ; then
-    PATH="/opt/homebrew/bin/:$PATH"
+    PATH="/opt/homebrew/bin:$PATH"
 fi
 
 if [ -d "/Applications/MacPorts/Emacs.app/Contents/MacOS" ] ; then
@@ -124,22 +124,12 @@ if [ -f "$HOME/.cargo/bin/exa" ] ; then
     alias tree="exa --tree"
 fi
 
-if [ -f "/Users/absenth/.nix-profile/bin/exa" ] ; then
-    alias ls="exa --color=always --icons=always"
-    alias ll="exa -alh --color=always --icons=always --git"
-    alias tree="exa --tree"
-fi
-
 if [ -f "$HOME/.cargo/bin/bat" ] ; then
     alias cat="bat"
 fi
 
 if [ -f "/Users/absenth/.nix-profile/bin/bat" ] ; then
     alias cat="/Users/absenth/.nix-profile/bin/bat"
-fi
-
-if [ -f "$HOME/.cargo/bin/hyperfine" ] ; then
-    alias time="hyperfine"
 fi
 
 if [ -f "$HOME/.cargo/bin/dust" ] ; then
@@ -163,8 +153,12 @@ fi
 
 
 # Rust powered utilities installed by the system package manager
-if [ -f "/usr/bin/exa" ] ; then
-    alias ls="exa"
-    alias ll="exa -alh"
-    alias tree="exa --tree"
+if [ -f "/opt/homebrew/bin/eza" ] ; then
+    alias ls="eza"
+    alias ll="eza -alh"
+    alias tree="eza --tree"
+fi
+
+if [ -f "/opt/homebrew/bin/bat" ] ; then
+    alias cat="bat -p"
 fi
