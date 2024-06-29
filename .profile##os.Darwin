@@ -150,6 +150,10 @@ if [ -d "$HOME/.cache/rebar3/bin:$PATH" ] ; then
     PATH=$PATH:$HOME/.cache/rebar3/bin
 fi
 
+# Setup direnv if present
+if [ -x "$(which direnv 2> /dev/null)" ] ; then
+    eval "$(direnv hook zsh)"
+fi
 
 
 # Rust powered utilities installed by the system package manager
