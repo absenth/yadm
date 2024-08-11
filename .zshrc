@@ -66,5 +66,12 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Shell Integrations
-eval "$(fzf --zsh)"
+if [[ ${OSTYPE} == "darwin"* ]] ; then
+  eval "$(fzf --zsh)"
+fi
+
+if [[ ${OSTYPE} == "linux"* ]] ; then
+  - [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+fi
+
 eval "$(zoxide init --cmd cd zsh)"
