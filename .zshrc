@@ -75,3 +75,5 @@ if [[ ${OSTYPE} == "linux"* ]] ; then
 fi
 
 eval "$(zoxide init --cmd cd zsh)"
+
+. "$HOME/.cargo/env"

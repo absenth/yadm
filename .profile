@@ -34,6 +34,10 @@ if [ -f "$HOME/.cargo/env" ] ; then
   source $HOME/.cargo/env
 fi
 
+if [ -d "$HOME/.cache/rebar3/bin" ] ; then
+    PATH="$HOME/.cache/rebar3/bin:$PATH"
+fi
+
 if [ -d "$HOME/bin/zig" ] ; then
     PATH=$PATH:$HOME/bin/zig
 fi
@@ -88,3 +92,5 @@ fi
 if [ -f "/run/user/$UID/podman/podman.sock" ] ; then
     export DOCKER_HOST=unix:///run/user/$UID/podman/podman.sock
 fi
+
+. "$HOME/.cargo/env"

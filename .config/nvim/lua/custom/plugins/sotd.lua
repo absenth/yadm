@@ -9,8 +9,8 @@ return
     config = function()
         require("sotd").setup({
             -- Optional: override default configuration
-            den_file = vim.fn.expand("~/.config/nvim/den.json"),
-            log_file = vim.fn.expand("~/.config/nvim/sotd.log"),
+            den_file = vim.fn.expand("~/.config/sotd/den.json"),
+            log_file = vim.fn.expand("~/.config/sotd/sotd.log"),
             logging_enabled = false,
             preshave_number = 1,
             post_number = 4,
