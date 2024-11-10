@@ -633,3 +633,11 @@ end
 function toggle_num()
   vim.o.number = not vim.o.number
 end
+
+---------------
+-- Debugging --
+---------------
+require('sotd').setup({
+  logging_enabled = true,
+  log_file = vim.fn.expand("~/.config/nvim/sotd.log"),
+})
