@@ -1,0 +1,119 @@
+{
+	"brush": [
+		{
+			"name": "Simpson Trafalgar T2 - Synthetic",
+			"status": "In Den",
+			"link": "https://www.simpsonshavingbrushes.com/store/brushes/synthetic-fibre-brushes/trafalgar-T2-synthetic-fibre-faux-ivory/",
+			"daily_post_link": " #FIXME "
+		},
+		{
+			"name": "Maggard - 24mm Purple Swirl Synthetic",
+			"status": "In Den",
+			"link": "https://maggardrazors.com/collections/brushes-knots/products/maggard-razors-purple-swirl-resin-handle-synthetic-shaving-brush-24mm",
+			"daily_post_link": " #FIXME "
+		},
+		{
+			"name": "Semogue - 24mm Semogue Owners Club Cherry Wood Pure Boar",
+			"status": "In Den",
+			"link": "https://maggardrazors.com/products/semogue-owners-club-pure-boar-shaving-brush-cherry-wood-24mm?_pos=10&_sid=e28572cbd&_ss=r",
+			"daily_post_link": " #FIXME "
+		},
+		{
+			"name": "Omega - 28mm Custom Handle Boar ",
+			"status": "In Den",
+			"link": "https://maggardrazors.com/products/omega-model-10048-pro-48-chrome-handle-boar-bristle-shaving-brush-28mm",
+			"daily_post_link": " #FIXME "
+		},
+		{
+			"name": "Zenith - 31mm Moar Boar ",
+			"status": "In Den",
+			"link": "https://www.reddit.com/r/Wetshaving/comments/yp8xje/moar_boar_the_final_frontier/",
+			"daily_post_link": " #FIXME "
+		}
+	],
+	"blade": [
+		{
+			"name": "Gillette Silver Blue",
+			"number_uses": "0"
+		},
+		{
+			"name": "Gillette Nacet",
+			"number_uses": "0"
+		},
+		{
+			"name": "Personna Lab Blue",
+			"number_uses": "0"
+		},
+		{
+			"name": "Personna 74",
+			"number_uses": "0"
+		}
+	],
+	"razor": [
+		{
+			"link": "https://www.badgerandblade.com/forum/threads/super-speed-identification.56974/",
+			"daily_post_link": "Gillette SuperSpeed '59",
+			"type": "DE",
+			"status": "In Den",
+			"name": "Gillette SuperSpeed 1959"
+		},
+		{
+			"link": "https://www.badgerandblade.com/forum/threads/super-speed-identification.56974/",
+			"daily_post_link": "Gillette SuperSpeed `76-Q4",
+			"type": "DE",
+			"status": "In Den",
+			"name": "Gillette SuperSpeed BirthQuarter"
+		},
+		{
+			"link": "FIXME",
+			"daily_post_link": "Weck Sextoblade - Purple Custom",
+			"type": "Shavette",
+			"status": "In Den",
+			"name": "Weck Hairshaper - purple"
+		},
+		{
+			"link": "FIXME",
+			"daily_post_link": "Weck Sextoblade - Black Handle",
+			"type": "Shavette",
+			"status": "In Den",
+			"name": "Weck Hairshaper - Black"
+		},
+		{
+			"link": "FIXME",
+			"daily_post_link": "Geneva Cutlery - 9/16 Straight",
+			"type": "Straight",
+			"status": "In Den",
+			"name": "Geneva Cutlery - 9/16 Straight"
+		},
+		{
+			"link": "FIXME",
+			"daily_post_link": "Razorock - Game Changer .84",
+			"type": "DE",
+			"status": "In Den",
+			"name": "Razorock - Game Changer .84"
+		},
+		{
+			"link": "FIXME",
+			"daily_post_link": "Blackland - Stainless Blackbird",
+			"type": "DE",
+			"status": "In Den",
+			"name": "Blackland - BlackBird Stainless Steel"
+		}
+	],
+	"lather": [
+		{
+			"name": "Stirling Arkadia",
+			"daily_post_link": "Stirling - Arkadia",
+			"status": "In Den",
+			"link": "https://www.stirlingsoap.com/products/arkadia-shave-soap"
+		}
+	],
+	"postshave": [
+		{
+			"name": "Stirling - Arkadia",
+			"daily_post_link": "Stirling - Arkadia AS splash",
+			"status": "In Den",
+			"link": ""
+		}
+	]
+}
