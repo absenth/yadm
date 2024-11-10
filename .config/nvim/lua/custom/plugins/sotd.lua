@@ -11,9 +11,9 @@ return
             -- Optional: override default configuration
             den_file = vim.fn.expand("~/.config/sotd/den.json"),
             log_file = vim.fn.expand("~/.config/sotd/sotd.log"),
-            logging_enabled = false,
-            preshave_number = 1,
-            post_number = 4,
+            logging_enabled = true,
+            preshave_number = 0,
+            post_number = 2,
         })
     end,
     -- Optional: Add keymaps
