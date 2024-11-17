@@ -587,6 +587,11 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   command = [[%s/\s\+$//e]],
 })
 
+-- Setup SOTD to execute --
+vim.api.nvim_create_user_command("SOTDCreate", function()
+  require("sotd").create_sotd()
+end, {})
+
 -----------------
 -- Normal mode --
 -----------------

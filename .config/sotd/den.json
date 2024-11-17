@@ -102,18 +102,18 @@
 	],
 	"lather": [
 		{
-			"name": "Stirling Arkadia",
-			"daily_post_link": "Stirling - Arkadia",
+			"name": "Barrister's Reserve - Fern",
+			"daily_post_link": "Barrister's Reserve - Fern",
 			"status": "In Den",
-			"link": "https://www.stirlingsoap.com/products/arkadia-shave-soap"
+			"link": "https://murphyandmcneil.com/products/barristers-reserve%C2%AE-fern-shaving-soap-by-barrister-and-mann"
 		}
 	],
 	"postshave": [
 		{
-			"name": "Stirling - Arkadia",
-			"daily_post_link": "Stirling - Arkadia AS splash",
+			"name": "Lucky Tiger",
+			"daily_post_link": "Lucky Tiger - After Shave & Face Tonic",
 			"status": "In Den",
-			"link": ""
+			"link": "https://www.getluckytiger.com/products/after-shave-face-tonic-8-oz"
 		}
 	]
 }
