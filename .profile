@@ -104,5 +104,3 @@ fi
 if [ -f "/run/user/$UID/podman/podman.sock" ] ; then
     export DOCKER_HOST=unix:///run/user/$UID/podman/podman.sock
 fi
-
-. "$HOME/.cargo/env"
