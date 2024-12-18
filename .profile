@@ -17,6 +17,18 @@ if [[ ${OSTYPE} == "darwin"* ]] ; then
     fi
 fi
 
+# Ensure Required zsh Plugins are installed
+if [ ! -d "$HOME/.config/zsh/Plugins/zsh-autosuggestions" ] ; then
+    git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.config/zsh/Plugins/zsh-autosuggestions
+fi
+if [ ! -d "$HOME/.config/zsh/Plugins/zsh-completions" ] ; then
+    git clone https://github.com/zsh-users/zsh-completions $HOME/.config/zsh/Plugins/zsh-completions
+fi
+if [ ! -d "$HOME/.config/zsh/Plugins/zsh-syntax-highlighting" ] ; then
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting $HOME/.config/zsh/Plugins/zsh-syntax-highlighting
+fi
+
+
 # Setup PATH variables that don't depend on the Operating System
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
