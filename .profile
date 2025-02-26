@@ -70,6 +70,10 @@ if [ -d "$HOME/.emacs.d/bin" ] ; then
     PATH="$HOME/.emacs.d/bin:$PATH"
 fi
 
+if [ -d "$HOME/.config/emacs/bin" ] ; then
+    PATH="$HOME/.config/emacs/bin/:$PATH"
+fi
+
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin/:$PATH"
 fi
