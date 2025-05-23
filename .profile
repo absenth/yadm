@@ -82,6 +82,10 @@ if [ -d "/usr/local/go" ] ; then
     PATH="/usr/local/go/bin:$PATH"
 fi
 
+if [ -d "/usr/local/bin/" ] ; then
+    PATH="/usr/local/bin/:$PATH"
+fi
+
 # Setup applications and aliases based on availability
 # Avoid enumerating every possible installation path
 # and test using command

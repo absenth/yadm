@@ -1,3 +1,3 @@
 return {
-    { "rebelot/kanagawa.nvim", name = "kanagawa" }
+  { 'rebelot/kanagawa.nvim', name = 'kanagawa' },
 }
