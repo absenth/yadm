@@ -11,6 +11,10 @@ if ! command -v "oh-my-posh" &> /dev/null ; then
   if [[ ${OSTYPE} == "linux"* ]] ; then
     curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/bin
   fi
+
+  if [[ ${OSTYPE} == "freebsd"* ]] ; then
+    curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/bin
+  fi
 fi
 
 # Setup and use Oh-My-Posh

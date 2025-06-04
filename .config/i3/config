@@ -108,7 +108,7 @@ bindsym $mod+d exec dmenu_run
 #bindsym $mod+d exec "rofi -combi-modi window,drun -show combi -modi combi"
 
 # Key combination for some of my favorite applications.
-bindsym $mod+Return exec "alacritty"
+bindsym $mod+Return exec "wezterm"
 bindsym $mod+Shift+f exec "firefox"
 
 # Map the print key to gnome-screenshot.
