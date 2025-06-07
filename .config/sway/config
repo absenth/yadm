@@ -224,5 +224,7 @@ bar {
 # Absenth's Additions:
 #
 font pango: SourceCodePro Medium 12
+gaps inner 4px
+gaps outer 4px
 
 include /etc/sway/config.d/*
