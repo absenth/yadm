@@ -23,8 +23,9 @@ set $browser firefox
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-#
+# output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg ~/Pictures/Wallpaper/thinkpad.jpg fill
+
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
@@ -226,5 +227,7 @@ bar {
 font pango: SourceCodePro Medium 12
 gaps inner 4px
 gaps outer 4px
+#
+#
 
 include /etc/sway/config.d/*
