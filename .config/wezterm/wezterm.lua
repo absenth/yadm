@@ -17,7 +17,7 @@ config.font = wezterm.font("JetBrains Mono"), { weight = "Regular", italic = fal
 --    wezterm.font 'Liga Comic Mono', { weight = 'Normal', italic = false }
 
 -- For example, changing the color scheme:
-config.default_prog = { "/usr/bin/zsh" }
+-- config.default_prog = { "/bin/zsh" }
 config.font_size = 14
 
 -- Configure the Window parameters:
