@@ -17,7 +17,7 @@ conky.text = [[
     {"full_text": " | ", "color":"\#555555"},
     {"full_text": "RAM: $mem","color":"\#cda869"},
     {"full_text": " | ", "color":"\#555555"},
-    {"full_text": "LAN: ${addr enp0s31f6}","color":"\#89b859"},
+    {"full_text": "LAN: ${addr em0}","color":"\#89b859"},
     {"full_text": " | ", "color":"\#555555"},
     {"full_text": "WIFI: ${addr wlp59s0}","color":"\#00aaaa"},
     {"full_text": " | ", "color":"\#555555"},
