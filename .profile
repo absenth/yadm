@@ -3,9 +3,9 @@
 # PATH variables.
 
 if [[ ${OSTYPE} == "darwin"* ]] ; then
-    if [ -d "/opt/homebrew/bin" ] ; then
-        PATH="/opt/homebrew/bin:$PATH"
-    fi
+	if [ -d "/opt/homebrew/bin" ] ; then
+		PATH="/opt/homebrew/bin:$PATH"
+	fi
 
     if [ -d "/Applications/MacPorts/Emacs.app/Contents/MacOS" ] ; then
         PATH="/Applications/MacPorts/Emacs.app/Contents/MacOS:$PATH"
@@ -84,6 +84,10 @@ fi
 
 if [ -d "/usr/local/bin/" ] ; then
     PATH="/usr/local/bin/:$PATH"
+fi
+
+if [ -d "$HOME/.lmstudio/bin" ] ; then
+	PATH="$HOME/.lmstudio/bin;$PATH"
 fi
 
 # Setup applications and aliases based on availability
