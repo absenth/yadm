@@ -98,6 +98,14 @@ if command -v "nvim" &>/dev/null ; then
 	alias vim="nvim"
 fi
 
+if command -v "surfraw" &>/dev/null ; then
+       export SURFRAW_graphical=yes
+       export SURFRAW_graphical_browser_open=open
+       if [[ ${OSTYPE} == "darwin"* ]] ; then
+	       export SURFRAW_browser="open -a Safari"
+       fi
+fi
+
 if command -v "eza" &>/dev/null ; then
 	alias ls="eza --icons=always --color=always"
 	alias ll="eza -alh --git --icons=always --color=always"
