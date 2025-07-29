@@ -74,6 +74,10 @@ if [ -d "$HOME/.config/emacs/bin" ] ; then
     PATH="$HOME/.config/emacs/bin/:$PATH"
 fi
 
+if [ -f "$HOME/.config/fabric/.profile" ] ; then
+	source $HOME/.config/fabric/.profile
+fi
+
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin/:$PATH"
 fi
@@ -89,6 +93,15 @@ fi
 if [ -d "$HOME/.lmstudio/bin" ] ; then
 	PATH="$HOME/.lmstudio/bin;$PATH"
 fi
+
+if [ -d "$HOME/.config/envman" ] ; then
+	[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+fi
+
+if [ -d "$HOME/.lmstudio/" ] ; then
+	export PATH="$HOME/.lmstudio/bin:$PATH"
+fi
+
 
 # Setup applications and aliases based on availability
 # Avoid enumerating every possible installation path
@@ -124,3 +137,4 @@ fi
 if [ -f "/run/user/$UID/podman/podman.sock" ] ; then
     export DOCKER_HOST=unix:///run/user/$UID/podman/podman.sock
 fi
+
