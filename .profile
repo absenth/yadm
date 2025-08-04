@@ -17,6 +17,10 @@ if [[ ${OSTYPE} == "darwin"* ]] ; then
     fi
 fi
 
+if [[ ${OSTYPE} == "freebsd"* ]] ; then
+	source $HOME/.freebsd.conf
+fi
+
 # Ensure Required zsh Plugins are installed
 if [ ! -d "$HOME/.config/zsh/Plugins/zsh-autosuggestions" ] ; then
     git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.config/zsh/Plugins/zsh-autosuggestions
