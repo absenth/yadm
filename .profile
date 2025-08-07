@@ -78,10 +78,6 @@ if [ -d "$HOME/.config/emacs/bin" ] ; then
     PATH="$HOME/.config/emacs/bin/:$PATH"
 fi
 
-if [ -f "$HOME/.config/fabric/.profile" ] ; then
-	source $HOME/.config/fabric/.profile
-fi
-
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin/:$PATH"
 fi
@@ -104,6 +100,10 @@ fi
 
 if [ -d "$HOME/.lmstudio/" ] ; then
 	export PATH="$HOME/.lmstudio/bin:$PATH"
+fi
+
+if [ -f "/usr/share/nvm/init-nvm.sh" ] ; then
+	source /usr/share/nvm/init-nvm.sh
 fi
 
 
