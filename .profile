@@ -17,6 +17,10 @@ if [[ ${OSTYPE} == "darwin"* ]] ; then
     fi
 fi
 
+if [[ ${OSTYPE} == "freebsd"* ]] ; then
+	source $HOME/.freebsd.conf
+fi
+
 # Ensure Required zsh Plugins are installed
 if [ ! -d "$HOME/.config/zsh/Plugins/zsh-autosuggestions" ] ; then
     git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.config/zsh/Plugins/zsh-autosuggestions
@@ -90,6 +94,19 @@ if [ -d "$HOME/.lmstudio/bin" ] ; then
 	PATH="$HOME/.lmstudio/bin;$PATH"
 fi
 
+if [ -d "$HOME/.config/envman" ] ; then
+	[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+fi
+
+if [ -d "$HOME/.lmstudio/" ] ; then
+	export PATH="$HOME/.lmstudio/bin:$PATH"
+fi
+
+if [ -f "/usr/share/nvm/init-nvm.sh" ] ; then
+	source /usr/share/nvm/init-nvm.sh
+fi
+
+
 # Setup applications and aliases based on availability
 # Avoid enumerating every possible installation path
 # and test using command
@@ -124,3 +141,4 @@ fi
 if [ -f "/run/user/$UID/podman/podman.sock" ] ; then
     export DOCKER_HOST=unix:///run/user/$UID/podman/podman.sock
 fi
+
