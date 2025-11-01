@@ -1,0 +1,32 @@
+#!/bin/sh
+
+# install homebrew
+
+system_type=$(uname -s)
+
+if [ "$system_type" = "Darwin" ]; then
+
+  # install homebrew if it's missing
+  if ! command -v brew >/dev/null 2>&1; then
+    echo "Installing homebrew"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  fi
+
+  if [ -f "$HOME/.Brewfile" ]; then
+    echo "Updating homebrew bundle"
+    brew bundle --global
+  fi
+
+fi
+
+# install common homebrew applications
+
+if [ "$system_type" = "Darwin" ]; then
+
+  echo "Updating brew directory and packages"
+  brew update && brew upgrade
+
+ echo "Installing a lot of software"
+  brew install bat bottom cmake coreutils eza fastfetch fd fzf gnutils glow go gopls grep hyperfine libvterm lua luajit luarocks neovim nmap node oh-my-posh pwgen ripgrep shellcheck sqlite tmux tree-sitter uv vhs
+
+fi
