@@ -27,6 +27,9 @@ if [ "$system_type" = "Darwin" ]; then
   brew update && brew upgrade
 
  echo "Installing a lot of software"
-  brew install bat bottom cmake coreutils eza fastfetch fd fzf gnutils glow go gopls grep hyperfine libvterm lua luajit luarocks neovim nmap node oh-my-posh pwgen ripgrep shellcheck sqlite tmux tree-sitter uv vhs
+  brew install bat bottom cmake coreutils eza fastfetch fd fzf gcc gnutils glow go gopls grep hyperfine libvterm lua luajit luarocks neovim nmap node oh-my-posh pwgen ripgrep shellcheck sqlite tmux tree-sitter unzip uv vhs
 
 fi
+
+# pull down nvim.kickstart
+git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
