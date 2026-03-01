@@ -82,13 +82,10 @@ if [ -d "$HOME/.config/emacs/bin" ] ; then
     PATH="$HOME/.config/emacs/bin/:$PATH"
 fi
 
-<<<<<<< HEAD
-=======
 #if [ -f "$HOME/.config/fabric/.profile" ] ; then
 #	source $HOME/.config/fabric/.profile
 #fi
 
->>>>>>> 1752ba3 (updating profile for opencode and removing fabric)
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin/:$PATH"
 fi
