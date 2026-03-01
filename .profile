@@ -82,6 +82,13 @@ if [ -d "$HOME/.config/emacs/bin" ] ; then
     PATH="$HOME/.config/emacs/bin/:$PATH"
 fi
 
+<<<<<<< HEAD
+=======
+#if [ -f "$HOME/.config/fabric/.profile" ] ; then
+#	source $HOME/.config/fabric/.profile
+#fi
+
+>>>>>>> 1752ba3 (updating profile for opencode and removing fabric)
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin/:$PATH"
 fi
@@ -110,6 +117,9 @@ if [ -f "/usr/share/nvm/init-nvm.sh" ] ; then
 	source /usr/share/nvm/init-nvm.sh
 fi
 
+if [ -d "$HOME/.opencode/bin" ] ; then
+	export PATH="$HOME/.opencode/bin:$PATH"
+fi
 
 # Setup applications and aliases based on availability
 # Avoid enumerating every possible installation path
@@ -145,4 +155,3 @@ fi
 if [ -f "/run/user/$UID/podman/podman.sock" ] ; then
     export DOCKER_HOST=unix:///run/user/$UID/podman/podman.sock
 fi
-
